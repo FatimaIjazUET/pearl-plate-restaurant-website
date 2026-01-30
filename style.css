@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+html { scroll-behavior: smooth; }
+body { background-color: #FFCC00; color: #000; overflow-x: hidden; }
+
+/* Navigation */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: #000; position: fixed; width: 100%; top: 0; z-index: 1000; }
+.logo { font-size: 24px; font-weight: bold; color: #fff; letter-spacing: 2px; }
+.logo span { color: #FFCC00; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 25px; }
+nav ul li a { text-decoration: none; color: #fff; font-weight: 700; transition: 0.3s; }
+nav ul li a:hover { color: #FFCC00; }
+
+.full-page { min-height: 100vh; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 20px; }
+
+/* Home */
+#home { background: linear-gradient(rgba(255,204,0,0.3), rgba(255,204,0,0.3)), url('hero-bg.jpg') no-repeat center center/cover; }
+.fancy-logo { font-family: 'Great Vibes', cursive; font-size: clamp(60px, 10vw, 110px); }
+.btn { padding: 15px 40px; background: #000; color: #FFCC00; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; transition: 0.3s; display: inline-block; }
+
+/* About Section */
+.about-section { background: url('about-bg.jpg') no-repeat center center/cover; padding: 0; position: relative; }
+.overlay-full { background: rgba(0, 0, 0, 0.75); width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #FFCC00; padding: 100px 10%; }
+.about-vision { max-width: 800px; margin-bottom: 30px; font-size: 18px; line-height: 1.6; color: #fff; }
+.section-title { font-size: 45px; margin-bottom: 10px; border-bottom: 3px solid #FFCC00; }
+
+/* CIRCLES ROTATION CODE - FIXED */
+.about-circles { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+.circle-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.circle { 
+    width: 90px; height: 90px; border: 2px solid #FFCC00; border-radius: 50%; 
+    display: flex; justify-content: center; align-items: center; font-size: 35px; 
+    background: rgba(0,0,0,0.3); 
+    transition: 0.6s ease-in-out; /* Rotation speed */
+}
+/* Mouse le jane par ghoomne wala effect */
+.circle-item:hover .circle { 
+    transform: rotate(360deg) scale(1.1); 
+    background: #FFCC00; 
+    color: #000;
+}
+
+/* Services */
+.section-title-black { font-size: 40px; margin-bottom: 30px; border-bottom: 3px solid #000; }
+.services-grid { display: flex; justify-content: center; gap: 20px; width: 100%; flex-wrap: wrap; }
+.service-card { width: 300px; background: #000; border-radius: 15px; overflow: hidden; transition: 0.3s; border: 2px solid #000; }
+.service-card:hover { transform: translateY(-10px); }
+
+.card-img { height: 220px; background-size: cover; background-position: center; width: 100%; }
+.card-1 { background-image: url('fine-dining.jpg'); }
+.card-2 { background-image: url('events.jpg'); }
+.card-3 { background-image: url('delivery.jpg'); background-size: cover; } 
+
+.card-text { padding: 15px; background: #000; color: #FFCC00; border-top: 1px solid #FFCC00; }
+.card-text h3 { font-size: 20px; margin-bottom: 5px; }
+.card-text p { font-size: 13px; color: #fff; }
+
+/* Contact Form */
+.form-container { width: 100%; max-width: 500px; }
+.form-container input, .form-container select, .form-container textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 2px solid #000; border-radius: 5px; background: #fff; }
+.form-container button { width: 100%; padding: 15px; background: #000; color: #FFCC00; font-weight: bold; border: none; cursor: pointer; font-size: 16px; transition: 0.3s; }
+.form-container button:hover { background: #333; }
+
+footer { background: #000; color: #fff; padding: 20px; width: 100%; text-align: center; }
